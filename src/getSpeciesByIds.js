@@ -16,6 +16,6 @@ const getSpeciesByIds = (...idToSearch) => {
   return result;
 };
 
-console.log(getSpeciesByIds(...actual));
+console.log(getSpeciesByIds(actual));
 
 module.exports = getSpeciesByIds;
