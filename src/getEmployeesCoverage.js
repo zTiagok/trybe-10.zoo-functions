@@ -10,6 +10,7 @@ const getEmployeeInfo = (searchEmployee) => employees.find((employee) => {
   } if (employee.id === searchEmployee) {
     return employee;
   }
+  return undefined;
 });
 
 // PEGA AS INFORMAÇÕES DO ANIMAL AO PASSAR SEU ID
@@ -41,31 +42,21 @@ const personIndex = (nameOrId) => {
 const allEmployeesIDs = () => {
   const employeeMap = employees.map((employee) => employee.id);
 
-  return employeeMap.map((map) => {
-    return (personIndex(map));
-  });
-};
-
-const checkID = (id) => {
-  const someID = employees.map((searchId) => {
-    return searchId.id;
-  });
-
-  return someID.some((some) => {
-    return some === id.id;
-  });
+  return employeeMap.map((map) => (personIndex(map)));
 };
 
 // RESOLUÇÃO MESTRE, RETORNANDO FUNÇÕES ANTERIORES CASO SEJA PASSADO UM CERTO PARÂMETRO
 function getEmployeesCoverage(nameOrId) {
-  if (nameOrId) {
-    return personIndex(nameOrId);
-  }
   if (!nameOrId) {
     return allEmployeesIDs();
   }
+  if (getEmployeeInfo(nameOrId) === undefined) {
+    throw new Error('Informações inválidas');
+  }
+  if (nameOrId) {
+    return personIndex(nameOrId);
+  }
 }
 
-console.log(checkID({ id: 'Id inválido' }));
-
+console.log(getEmployeeInfo({ id: 'Id inválido' }));
 module.exports = getEmployeesCoverage;
