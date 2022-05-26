@@ -18,4 +18,6 @@ const getSpeciesByIds = (...idToSearch) => {
 
 console.log(getSpeciesByIds(actual));
 
+// FINALIZADO!
+
 module.exports = getSpeciesByIds;

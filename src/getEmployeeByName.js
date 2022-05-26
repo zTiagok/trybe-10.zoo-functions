@@ -9,16 +9,16 @@ function getEmployeeByName(employeeName) {
   }
 
   return employees.find((employee) => {
-      if (employee.firstName === employeeName) {
-        return employee.firstName;
-      } else if (employee.lastName === employeeName) {
-        return employee.lastName;
-      }
+    if (employee.firstName === employeeName) {
+      return employee.firstName;
+    } if (employee.lastName === employeeName) {
+      return employee.lastName;
     }
-  )
+
+    return null;
+  });
 }
 
-getEmployeeByName('Wishart')
-
+// FINALIZADO!
 
 module.exports = getEmployeeByName;

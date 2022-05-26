@@ -27,13 +27,13 @@ const handlerElephants = (param) => {
     return 'Parâmetro inválido, é necessário uma string';
   }
   const elephants = getElephants();
-  console.log(Object.keys(elephants))
+  console.log(Object.keys(elephants));
   if (Object.keys(elephants).includes(param)) {
     return elephants[param];
   }
   return computeData(param, elephants);
 };
 
-console.log(handlerElephants('residents'))
+console.log(handlerElephants('residents'));
 
-module.exports = handlerElephants, computeData;
+module.exports = handlerElephants;
