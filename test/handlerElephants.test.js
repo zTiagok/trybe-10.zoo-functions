@@ -51,7 +51,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(expected).toBe(result);
   });
 
-  it('A função com o parâmetro não sendo uma string deve retornar um erro', () => {
+  it('A função com o um parâmetro pré-definido deverá retorna-lo.', () => {
     const residents = [
       { name: 'Ilana', sex: 'female', age: 11 },
       { name: 'Orval', sex: 'male', age: 15 },
