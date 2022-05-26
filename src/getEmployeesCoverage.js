@@ -58,5 +58,7 @@ function getEmployeesCoverage(nameOrId) {
   }
 }
 
+// FINALIZADO!
+
 console.log(getEmployeeInfo({ id: 'Id inválido' }));
 module.exports = getEmployeesCoverage;

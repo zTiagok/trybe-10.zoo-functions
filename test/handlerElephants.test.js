@@ -1,4 +1,3 @@
-// const countAnimals = require('../src/countAnimals');
 const handlerElephants = require('../src/handlerElephants');
 
 describe('Testes da função HandlerElephants', () => {
