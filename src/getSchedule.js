@@ -26,14 +26,16 @@ const retrieveDaysHours = () => {
   const weekDays = Object.keys(hours);
   const filteredWeek = {};
 
-  weekDays.map((day, index) => {
-    if (index === 6) {
+  weekDays.map((day) => {
+    if (day === 'Monday') {
       filteredWeek[day] = { officeHour: 'CLOSED',
         exhibition: 'The zoo will be closed!' };
+    } else if (day !== 'Monday') {
+      filteredWeek[day] = { officeHour: `Open from ${hours[day]
+        .open}am until ${hours[day].close}pm`,
+      exhibition: retrieveAnimals(day) };
     }
-    filteredWeek[day] = { officeHour: `Open from ${hours[day]
-      .open}am until ${hours[day].close}pm`,
-    exhibition: retrieveAnimals(day) };
+    console.log(day);
   });
 
   return filteredWeek;
@@ -46,7 +48,6 @@ function getSchedule(scheduleTarget) {
   } if (scheduleTarget === undefined) {
     return retrieveDaysHours();
   }
-
 }
 
 console.log(retrieveDaysHours());
