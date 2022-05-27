@@ -2,11 +2,7 @@ const data = require('../data/zoo_data');
 
 const { species, hours } = data;
 
-const targetExhibition = (target) => {
-  return species.find((specie) => {
-    return specie.name === target;
-  }).availability;
-};
+const targetExhibition = (target) => species.find((specie) => specie.name === target).availability;
 
 const retrieveAnimals = (day) => {
   const animalArray = [];
@@ -35,22 +31,47 @@ const retrieveDaysHours = () => {
         .open}am until ${hours[day].close}pm`,
       exhibition: retrieveAnimals(day) };
     }
-    console.log(day);
   });
 
   return filteredWeek;
 };
 
+const checkIf = (target) => {
+  const animals = ['lions', 'otters', 'elephants', 'snakes', 'frogs',
+    'bears', 'tigers', 'girrafes', 'penguins'];
+  const days = Object.keys(hours);
+
+  if (target === undefined) {
+    return true;
+  }
+  return animals.some((animal) => {
+    return days.some((day) => {
+      if (target === day) {
+        return true;
+      }
+      if (target === animal) {
+        return true;
+      }
+      return false;
+    });
+  });
+};
+
 // MAIN ------------------------------------------------------
 function getSchedule(scheduleTarget) {
+  if (!checkIf(scheduleTarget) || scheduleTarget === undefined) {
+    return retrieveDaysHours();
+  }
+  if (scheduleTarget === 'Monday') {
+    return {
+      Monday: { officeHour: 'CLOSED', exhibition: 'The zoo will be closed!' },
+    };
+  }
   if (scheduleTarget) {
     return targetExhibition(scheduleTarget);
-  } if (scheduleTarget === undefined) {
-    return retrieveDaysHours();
   }
 }
 
-console.log(retrieveDaysHours());
+console.log(getSchedule("Monday"))
 
-// console.log(getSchedule('lions'));
 module.exports = getSchedule;
