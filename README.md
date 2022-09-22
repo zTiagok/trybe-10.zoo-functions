@@ -21,16 +21,18 @@
     🚨 Warning 🚨
   </h3>
   <br>
-  <span> The test files were provided by Trybe to evaluate the project. </span>
+  <span> Some Javascript and test files were provided by Trybe to evaluate the project. </span>
+  <br><br>
+  <b> The tests in the "/tests" folder were all made by me! </b>
   <br>
   <hr>
   <h3>
     ℹ️ Information ℹ️
   </h3>
   <br>
-  <span> - </span> 
+  <span> Simulating a zoo system, I implemented several functions for different purposes. The system has information about the animals, employees and opening hours, so the functions I developed can act in a way that makes it easier to manipulate the data. </span> 
   <br><br>
-  <span> - </span>
+  <span> I also developed tests to check if some functions reached their objectives in the right way. </span>
   <br>
   <hr>
   <h3>
@@ -57,10 +59,25 @@
   <br>
   <hr>
   <h3>
-    📄 Pages and Components 📄
+    📄 Features 📄
   </h3>
   <br>
-  <span> - </span>
+  <span> ◐ Searches for the species of animals via an id and returns an array containing all animals of that species. ◑ </span>
+  <br><br>
+  <span> ◐ Given a species and an age as parameter, returns whether all animals of that species are that age or older. ◑ </span>
+  <br><br>
+  <span> ◐ Searches for collaborators by their first or last name. ◑ </span>
+  <br><br>
+  <span> ◐ Checks if a collaborator is a manager and which people he/she leads. ◑ </span>
+  <br><br>
+  <span> ◐ Counts the number of species of animals living in the zoo. ◑ </span>
+  <br><br>
+  <span> ◐ Calculates the total amount of zoo visitors' entrance fees. ◑ </span>
+    <br><br>
+  <span> ◐ Creates a schedule of available visiting times for each animal species. ◑ </span>
+    <br><br>
+  <span> ◐ Finds the oldest animal of a species that is managed by a cooperating person. ◑ </span>
+  <br><br>
   <br>
   <hr>
   <h3>
