@@ -39,18 +39,20 @@
   <div align="left">
   <br>
   
-- [X] 1. 
-- [X] 2. 
-- [X] 3. 
-- [X] 4. 
-- [X] 5. 
-- [X] 6. 
-- [X] 7. 
-- [X] 8.
-- [X] 9. 
-- [X] 10. 
-- [X] 11. 
-- [X] 12. 
+- [X] 1. Implement a function `getSpeciesByIds` that searches for animal species by id.
+- [X] 2. Implement a function `getAnimalsOlderThan` that checks if all animals of a species have the minimum age specified.
+- [X] 3. Implement the function `getEmployeeByName` that searches for employees by first or last name.
+- [X] 4. Implement the function `getRelatedEmployees` that creates the management of the collaborating people according to their manager.
+- [X] 5. Implement the function `countAnimals` that counts the animals of each species.
+- [X] 6. Get at least 80% test coverage in the `handlerElephants` function.
+- [X] 7. Get at least 90% test coverage in the `handlerElephants` function.
+- [X] 8. Implement the `calculateEntry` function that calculates the total input price.
+- [X] 9. Implement the function `getOldestFromFirstSpecies` that fetches the oldest animal of the first managed species.
+- [X] 10. Implement the function `getEmployeesCoverage` that creates an association of information to cover the collaborating people.
+- [X] 11. Get at least 85% test coverage in the `getOpeningHours` function.
+- [X] 12. Get at least 95% testing coverage for the `getOpeningHours` function.
+- [X] 13. Get 100% test coverage on `handlerElephants`.
+- [X] 14. Get at least 100% test coverage on `getOpeningHours`.
   </div>
   <br>
   <hr>
