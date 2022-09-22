@@ -1,9 +1,9 @@
 <div align="center">
   <h3>
-    Check out this project <a href="-"> website</a>! 
+    This project has no website. 
   <h3>
   <h2>
-    -
+    Zoo Functions
     <br><br>
   </h2>
 
